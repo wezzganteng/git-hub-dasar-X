@@ -1,0 +1,1 @@
+alert("saya sedang baelajar java script");

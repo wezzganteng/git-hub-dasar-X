@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+        // nota
+        var nama= prompt("masukan nama")
+        var jenis=prompt("masukan jenis")
+        var lama = prompt ("lama menginap : " );
+        var bayar= document.getElementById("")
+        var kamar="";
+        var tarif= 0;
+        var diskon=0;
+        var kembalian=tarif-bayar;
+      
+        // proses perhitungan
+        if (jenis ==1){
+            tarif=lama*275000;
+            kamar="duluxe room";
+        } else if( jenis==2){
+            tarif=lama*300000;
+            kamar="suite room";
+        }else if ( jenis==3);
+        tarif=lama*375000;{
+            kamar="president room";
+        }
+
+        if (status ==1){
+            if(lama>=4 && lama <=7){
+                diskon=0.20*tarif;
+            }else if(lama>7){
+                diskon=0.35*tarif;
+            }
+        }else if (status==2){
+            if(lama>=4 && lama<=7){
+                diskon =0.10*tarif;
+            }else if (lama>7){
+                diskon=0.15*tarif;
+            }
+        }
+       
+        document.write("nama pelanggan : " +nama + "<br>");
+        document.write("jenis kamar :" + kamar+"<br>");
+        document.write("lama menginap :" + lama+"<br>");
+        document.write("tarif penginapan :"+ tarif+"<br>");
+        document.write("Diskon penginapan :" +diskon+"<br>");
+        document.write("nominal yg harus di bayar :" + bayar+"<br>");
+        document.write("kembalian anda :" +bayar+"<br>");
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

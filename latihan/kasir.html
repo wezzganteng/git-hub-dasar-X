@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>kasir</title>
+ <style>
+ p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: #ffffff;
+      font-family: verdana;
+      background-color: #fc5185;
+      border-radius: 20px;
+    }
+
+  div{
+      font-family: arial;
+      background-color: rgb(255,255,255,0.7);
+      width: 300px;
+      margin: 180px auto;
+      padding: 30px;
+      text-align: right;
+      color: #2D2D2D;
+      border-radius: 40px 10px;
+      box-shadow: 2px 2px 7px #393939;
+    }
+ </style>
+</head>
+<body>
+
+ <div>
+ <center>  <h1>list barang : </h1> 
+ <h2>Sapu  <br>
+  Lap pel  <br>
+  Ember  <br>
+  Gayung  <br> </h2> </center>
+  <br>
+  <center>  <p>kasir</p></center>
+  <table border="0">
+    <tr>
+<th>nama barang</th>    
+    <th><input type="text" id="jenis"  value="" onchange="total()"></th>
+   </tr>
+ <tr>    
+    <th>Jumlah Beli</th>    
+    <th><input type="number" id="jumlah"  value="0" onchange="total()"></th>
+   </tr>
+  
+
+   <tr>    
+    <th>Harga satuan</th>
+    <th><input type="text"  id="harga" disabled></th>
+   </tr>
+
+  
+   <tr>    
+    <th>jumlah total</th>
+    <th><input type="text"  id="total" disabled></th>
+   </tr>
+
+   <tr>    
+    <th>Pembayaran</th>    
+    <th><input type="number" id="bayar" onchange="total()"></th>
+   </tr>
+   
+   <tr>    
+    <th>Kembalian</th>
+    <th><input type="text"  id="total1" disabled></th>
+   </tr>
+   <tr>   
+    <table width="281" height="100px" border="0">
+    <th><label align="landscape"  id="cetak" ></label></th>
+    </table>
+   </tr>         
+   
+  </table>
+        
+       
+  
+  
+  <script type="text/javascript">
+  
+  function total() {
+  
+   var jumlah_beli =  parseInt(document.getElementById('jumlah').value);
+   var pembayaran =  parseInt(document.getElementById('bayar').value);
+   var jenis = document.getElementById("jenis").value;
+
+
+
+   if (jenis=="sapu"){
+  a=45000
+}else if (jenis=="ember"){
+ a=30000;
+}else if( jenis=="gayung"){
+  a=15000;
+}
+else if( jenis=="lap pel"){
+  a=65000;
+}
+else{
+  alert("barang tidak ada")
+}
+
+     var harga = a;
+          document.getElementById('harga').value = a;
+   var jumlah_harga = harga * jumlah_beli;
+    document.getElementById('total').value = jumlah_harga;
+
+
+ if (pembayaran <= jumlah_harga){
+alert("uang anda kurang");
+  
+ }
+
+
+   var kembali = pembayaran - jumlah_harga;
+    document.getElementById('total1').value = kembali;
+  
+ 
+  }
+                    
+  
+  </script>
+ </div>
+
+ 
+</body>
+</html>
